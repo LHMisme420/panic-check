@@ -1,33 +1,15 @@
 {
   "manifest_version": 3,
-  "name": "PanicCheck – Fear-Monger Detector",
-  "version": "1.0.0",
-  "description": "Detects when media is fear-mongering without evidence. Slaps big red warnings on panic porn.",
-  "icons": {
-    "16": "icons/icon16.png",
-    "48": "icons/icon48.png",
-    "128": "icons/icon128.png"
-  },
-  "permissions": [
-    "activeTab",
-    "storage"
-  ],
+  "name": "PanicCheck",
+  "version": "0.1",
+  "description": "Detects fear-mongering and rewrites content into a calm, factual version.",
+  "permissions": ["activeTab", "scripting"],
   "host_permissions": [
-    "http://localhost:8000/*",
-    "https://*.tavily.com/*"
-  ],
-  "background": {
-    "service_worker": "background.js"
-  },
-  "content_scripts": [
-    {
-      "matches": ["<all_urls>"],
-      "js": ["content.js"],
-      "run_at": "document_end"
-    }
+    "<all_urls>",
+    "http://127.0.0.1/*"
   ],
   "action": {
-    "default_popup": "popup/popup.html",
-    "default_title": "PanicCheck"
+    "default_title": "PanicCheck",
+    "default_popup": "popup.html"
   }
 }
