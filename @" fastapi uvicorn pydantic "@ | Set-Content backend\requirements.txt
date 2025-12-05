@@ -1,0 +1,5 @@
+@"
+fastapi
+uvicorn
+pydantic
+"@ | Set-Content backend\requirements.txt
