@@ -1,15 +1,13 @@
 {
   "manifest_version": 3,
   "name": "PanicCheck",
-  "version": "0.1",
+  "version": "0.2",
   "description": "Detects fear-mongering and rewrites content into a calm, factual version.",
   "permissions": ["activeTab", "scripting"],
-  "host_permissions": [
-    "<all_urls>",
-    "http://127.0.0.1/*"
-  ],
+  "host_permissions": ["<all_urls>", "http://127.0.0.1/*"],
   "action": {
     "default_title": "PanicCheck",
     "default_popup": "popup.html"
   }
 }
+
