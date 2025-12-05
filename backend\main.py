@@ -21,3 +21,4 @@ def analyze(input: InputText):
         "warning": fear_data["fear_score"] > 60
     }
 "@ | Set-Content backend\main.py
+"warning": fear_data["fear_score"] > 60
