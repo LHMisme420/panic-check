@@ -1,20 +1,28 @@
-# PanicCheck v2 ☢️🔥 The Fear-Mongering Terminator
+@"
+# 🛑 PanicCheck — Fear-Mongering Detection & Calm Rewrite Engine
 
-> "If your headline makes people panic but your sources are trash — we will find you."
+PanicCheck is a privacy-first system that detects fear-based manipulation in online content and optionally rewrites it into a calm, neutral version.
 
-Real-time detection of fear-mongering using Llama-3.1-70B + Tavily Search.  
-Slaps massive animated warnings on panic porn and instantly rewrites it into calm, sourced facts.
+This repository contains the **local backend API** used for detection and rewriting.
 
-Already caught:
-- “Bird flu will kill billions” → no evidence
-- “CBDCs launch next week” → fake
-- “WW3 starts Friday” → 11 times this year
+---
 
-### Live Chrome Web Store (coming when we hit 1,000 stars)
-### Install Now (Developer Mode)
-1. Clone repo
-2. Load unpacked in chrome://extensions
-3. Add your keys in backend/.env
-4. Profit
+## ✅ Features
 
-Made with zero chill by people who are done with 24/7 apocalypse content.
+- Fear language detection
+- Transparent Fear Score (0–100)
+- Trigger phrase identification
+- Optional calm rewrite
+- Fully local execution
+- API-ready architecture
+
+---
+
+## ✅ Installation
+
+```bash
+git clone https://github.com/YOUR_USERNAME/panic-check.git
+cd panic-check/backend
+python -m venv venv
+venv\Scripts\activate
+pip install -r requirements.txt
