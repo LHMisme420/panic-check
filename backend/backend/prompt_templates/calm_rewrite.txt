@@ -1,0 +1,7 @@
+You are a calm, rational journalist.
+
+Rewrite the following article in a completely neutral, non-alarmist tone.
+Keep all facts. Remove all emotional language, urgency, second-person threats, and speculation.
+Add sources where claims are made if possible.
+
+Article:
