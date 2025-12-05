@@ -1,21 +1,34 @@
-@"
 import re
 
 FEAR_KEYWORDS = {
-    "collapse": 10,
-    "crisis": 9,
-    "panic": 9,
-    "catastrophe": 10,
-    "emergency": 8,
-    "breaking": 6,
-    "disaster": 9,
-    "war": 8,
-    "death": 10,
-    "experts warn": 7,
-    "without warning": 7,
-    "immediately": 6,
-    "terrifying": 10,
-    "devastating": 9
+    "collapse": 18,
+    "crisis": 15,
+    "panic": 16,
+    "catastrophe": 20,
+    "emergency": 14,
+    "breaking": 12,
+    "disaster": 17,
+    "war": 16,
+    "death": 20,
+    "mass death": 30,
+    "you are not safe": 35,
+    "experts warn": 14,
+    "without warning": 14,
+    "imminent": 18,
+    "terrifying": 18,
+    "devastating": 19,
+    "total collapse": 35,
+    "end of the world": 40,
+    "everything will change": 15
+}
+
+INTENSITY_MULTIPLIERS = {
+    "total": 1.4,
+    "immediate": 1.3,
+    "imminent": 1.3,
+    "mass": 1.4,
+    "global": 1.2,
+    "final": 1.5
 }
 
 def analyze_fear(text: str):
@@ -23,16 +36,5 @@ def analyze_fear(text: str):
     score = 0
     triggers = []
 
-    for phrase, weight in FEAR_KEYWORDS.items():
-        matches = len(re.findall(phrase, text_lower))
-        if matches > 0:
-            score += matches * weight
-            triggers.append(phrase)
-
-    score = min(score, 100)
-
-    return {
-        "fear_score": score,
-        "triggers": list(set(triggers))
-    }
-"@ | Set-Content backend\fear_engine.py
+    # Phrase scoring
+    for phrase, weight
